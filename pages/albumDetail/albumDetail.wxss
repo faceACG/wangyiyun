@@ -1,0 +1,54 @@
+.header {
+  width: 90%;
+  margin: 10px auto;
+  height: 240rpx;
+  display: flex;
+
+}
+
+.pic {
+  height: 220rpx;
+  width: 220rpx;
+  flex-shrink: 0;
+}
+
+.description {
+  margin-left: 15px;
+  max-height: 7.5em;
+  font-size: 13px;
+}
+
+.header text {
+  font-size: 13px;
+  margin-left: 10px;
+  line-height: 1.5em;
+}
+
+.item {
+  height: 75rpx;
+  width: 90%;
+  margin: 10px auto;
+  display: flex;
+  font-size: 13px;
+}
+
+.index {
+  font-size: 15px;
+  margin-right: 8px;
+}
+
+.al {
+  margin-right: 5px;
+  color: #ccc;
+  font-size: 12px;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 3px;
+}
+
+.alName {
+  margin-right: 4px;
+  letter-spacing: .1em;
+}

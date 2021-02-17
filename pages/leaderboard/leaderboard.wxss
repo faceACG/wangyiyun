@@ -1,0 +1,67 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.Soaring,
+.newL,
+.hot,
+.Original {
+  height: 240rpx;
+  width: 90%;
+  border-radius: 20rpx;
+  display: flex;
+  box-sizing: border-box;
+  background: rgba(116, 208, 185, .5);
+  margin: 15px auto;
+}
+
+.newL {
+  background: rgba(132, 94, 194, .3);
+}
+
+.hot {
+  background: rgb(255, 94, 120, .4);
+}
+
+.Original {
+  background: rgba(249, 248, 113,.6)
+}
+
+.imgT {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #c02020;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.img {
+  margin-left: 15px;
+  height: 120rpx;
+  width: 120rpx;
+  margin-top: 8px;
+}
+
+.main {
+  width: 60%;
+  border-radius: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main text {
+  font-size: 13px;
+  color: #333;
+}
+
+.i {
+  margin-right: 5px;
+}

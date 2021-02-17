@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="bg"></view>
+  <view class="list">
+    <view class="item" wx:for="{{songs}}" data-id = "{{item.id}}"bindtap="toplay">
+      <image src="{{item.al.picUrl}}"></image>
+      <view class="itemInfo">
+        <text class="name">{{item.name}}</text>
+        <text class="alName"wx:for="{{item.ar}}" wx:for-item="ar">{{ar.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,11 @@
+<view class="main">
+  <view class="hot">
+    <text class="title">热门新碟</text>
+    <view class="container">
+    <view class="albumItem" wx:for="{{albums}}" wx:key="index" data-id="{{item.id}}" bindtap="toList">
+     <image class="pic" src="{{item.picUrl}}"></image>
+     <text class="albumnmane">{{item.name}}</text>
+    </view>
+    </view>
+  </view>
+</view>

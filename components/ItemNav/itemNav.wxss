@@ -1,0 +1,31 @@
+/* components/ItemNav/itemNav.wxss */
+.Nav{
+  display: flex;
+  justify-content: space-between;
+  padding:0 15px;
+  margin-top:10px;
+  font-size: 14px;
+  
+}
+.font{
+  font-weight:700;
+  color:#c20c0c;
+  display: block;
+  position: relative;
+  text-indent:.5rem;
+}
+.font::before{
+  display: block;
+  content:"";
+  position: absolute;
+  height:100%;
+  width:10rpx;
+  background:#c20c0c;
+  left:0px;
+}
+.more{
+  font-size: 12px;
+  vertical-align: top;
+  line-height: 14px;
+  align-self: flex-end;
+}

@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="Soaring" data-ListId="{{Soaring.id}}" bindtap="toList">
+    <view class="imgT">
+      <text class="title">{{Soaring.name}}</text>
+      <image class="img" src="{{Soaring.coverImgUrl}}"></image>
+    </view>
+    <view class="main">
+      <view wx:for="{{Soaringsongs}}" wx:key="id">
+        <text class="i">{{index+1}}</text>
+        <text  data-id="{{item.id}}" data-listid="{{Soaring.id}}" catchtap="toplay">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="newL"  data-ListId="{{newL.id}}" bindtap="toList">
+    <view class="imgT">
+      <text class="title">{{newL.name}}</text>
+      <image class="img" src="{{newL.coverImgUrl}}"></image>
+    </view>
+    <view class="main">
+      <view wx:for="{{nowgsongs}}" wx:key="id" >
+        <text class="i">{{index+1}}</text>
+        <text  data-id="{{item.id}}" data-listid="{{Soaring.id}}" catchtap="toplay">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="hot"  data-ListId="{{hot.id}}" bindtap="toList">
+    <view class="imgT">
+      <text class="title">{{hot.name}}</text>
+      <image class="img" src="{{hot.coverImgUrl}}"></image>
+    </view>
+    <view class="main">
+      <view wx:for="{{hotsongs}}" wx:key="id" >
+        <text class="i">{{index+1}}</text>
+        <text  data-id="{{item.id}}" data-listid="{{Soaring.id}}" catchtap="toplay">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="Original"  data-ListId="{{Original.id}}" bindtap="toList">
+    <view class="imgT">
+      <text class="title">{{Original.name}}</text>
+      <image class="img" src="{{Original.coverImgUrl}}"></image>
+    </view>
+    <view class="main">
+      <view wx:for="{{Originalsongs}}" wx:key="id" >
+        <text class="i">{{index+1}}</text>
+        <text  data-id="{{item.id}}" data-listid="{{Soaring.id}}" catchtap="toplay">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

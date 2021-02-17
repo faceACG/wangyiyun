@@ -1,0 +1,30 @@
+<view class="songlistContainer">
+  <view class="main">
+    <view class="listInfo" style="background:url({{coverImgUrl}});background-size:100vw"></view>
+    <image src="{{coverImgUrl}}" class="pic"></image>
+    <view class="info">
+        <text class="dec">歌单描述</text>
+      <scroll-view scroll-y="true" class="description">
+        <view class="des">
+          <text class="font">{{description?description:""}}</text>
+        </view>
+      </scroll-view>
+      <view class="topT">
+        <text>标签:</text>
+        <text wx:for="{{tags}}" class="tag">{{item}}</text>
+      </view>
+    
+    </view>
+  </view>
+  <scroll-view scroll-y class="list"  bindscroll="getMore" bindrefresherpulling="getMore">
+    <view class="item" wx:for="{{tracks}}" bindtap="play" wx:key="id" data-id="{{item.id}}" data-listId="{{id}}">
+      <text class="num">{{index+1}}</text>
+      <view class="songContainer">
+        <text class="songName">{{item.name}}</text>
+        <view class="nameView">
+          <text class="songArt" wx:for="{{item.ar}}" wx:key="id" wx:for-item="ar">{{ar.name}}</text>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,33 @@
+.bg {
+  height: 150px;
+  width: 100%;
+  background: url(https://s2.music.126.net/style/web2/img/recmd_daily.jpg?a99239ef87811847f29ae81e5cd5bd37);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 20px;
+}
+.item{
+  height:100rpx;
+  display: flex;
+  font-size: 14px;
+  color:#333;
+  padding:0 20px;
+  box-sizing: border-box;
+  margin-top:5px;
+}
+.item image{
+  height:80rpx;
+  width:80rpx;
+  border-radius:8px;
+}
+.itemInfo{
+  display:flex;
+  flex-direction:column;
+  margin-left:15px;
+}
+.alName{
+  margin-top:3px;
+  font-size:12px;
+  color:#ccc;
+}

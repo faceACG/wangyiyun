@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="dowebok">
+    <view class="form-item">
+      <input id="username" type="text" autocomplete="off" placeholder="账号" value="{{phone}}" bindblur="testPhone" />
+    </view>
+    <view class="form-item">
+      <input id="password" type="password" value="{{possword}}" bindinput="posswordInput" autocomplete="off" placeholder="登录密码" bindblur="testPossword" />
+    </view>
+    <view class="form-item">
+      <button id="submit" bindtap="login">登录</button>
+    </view>
+  </view>
+</view>

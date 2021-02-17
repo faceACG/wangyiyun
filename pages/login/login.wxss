@@ -1,0 +1,96 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+}
+
+.dowebok {
+  background: linear-gradient(to right bottom, rgb(209, 47, 6) ,rgba(255, 0, 21,.5));
+  margin-top: 100px;
+  width: 80%;
+  height: 200px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0px 10px 20px 0px rgba(33, 33, 33, .3);
+}
+
+
+.form-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+}
+
+.form-item input {
+  width: 80%;
+  height: 2rem;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  font-size: .8rem;
+  color: #333;
+  background: #fff;
+  outline: none;
+  line-height: 2rem;
+  text-indent: 1em;
+  padding-left: 10px;
+}
+
+.form-item button {
+  width: 30%;
+  height: 2rem;
+  border: 0;
+  border-radius: 10px;
+  font-size: .8rem;
+  color: #1f6f4a;
+  outline: none;
+  cursor: pointer;
+  background-color: #fff;
+  line-height: 2rem;
+}
+
+.tip {
+  display: none;
+  position: absolute;
+  left: 20px;
+  top: 52px;
+  font-size: 14px;
+  color: #f50;
+}
+
+
+.reg-bar {
+  width: 360px;
+  margin: 20px auto 0;
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.dowebok ::-webkit-input-placeholder {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.dowebok :-moz-placeholder {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.dowebok ::-moz-placeholder {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #fff;
+}
+
+.dowebok :-ms-input-placeholder {
+  font-size: 15px;
+  line-height: 1.4;
+  color: #fff;
+}

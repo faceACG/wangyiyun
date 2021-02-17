@@ -1,0 +1,18 @@
+<view>
+  <view class="searchBlock">
+    <input class="search" type="text" value="{{search}}" placeholder="搜索" bindinput="inputd"/>
+    <text class="iconfont  icon-sousuo" bindtap="Tosearch"></text>
+  </view>
+  <title class="hotSearch">热搜榜</title>
+  <view class="hots">
+    <text class="hots-item" wx:for="{{hots}}" wx:key="index" data-search="{{item.first}}" bindtap="search">{{item.first}}</text>
+  </view>
+  <view class="result">
+    <view class="song-item" wx:for="{{songs}}"data-id="{{item.id}}" bindtap="toPlay">
+      <text>{{item.name}}</text>
+      <view class="alname">
+        <text wx:for="{{item.artists}}" wx:for-item="al" class="al">{{al.name}}</text>
+      </view>
+    </view>
+  </view>
+</view>

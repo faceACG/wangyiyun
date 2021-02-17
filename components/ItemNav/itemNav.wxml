@@ -1,0 +1,4 @@
+<view class="Nav">
+  <text class="font">{{innerText}}</text>
+  <text class="more">{{more}}</text>
+</view>

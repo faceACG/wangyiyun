@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="header">
+    <image class="pic" src="{{album.picUrl}}"></image>
+   
+    <scroll-view scroll-y="true" class="description">
+      <view>
+      <text>{{album.description}}</text>
+    </view>
+      </scroll-view>
+  </view>
+  <text>包含歌曲列表</text>
+  <view class="main">
+    <view class="item" wx:for="{{songs}}"wx:key="index" data-id="{{item.id}}" bindtap="play">
+      <text class="index">{{index+1}}</text>
+      <view>
+        <text class="name">{{item.name}}</text>
+        <view class="al">
+          <text class="alName" wx:for="{{item.ar}}" wx:for-item="ar">{{ar.name}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

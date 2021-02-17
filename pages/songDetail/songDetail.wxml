@@ -1,0 +1,20 @@
+<view class="songDetail">
+  <view class="bgImg" bindtap="toggleLyrics"
+    style="background:url({{picUrl}});background-size:cover;background-attachment:fixed;"></view>
+  <view wx:if="{{toggle}}" class="main" bindtag="toggleLyrics">
+    <image class="img {{flag?'playing':''}}" src="{{picUrl}}"></image>
+    <view class="Ring {{flag?'play':''}}" ></view>
+  </view>
+  <view class="lyrics" wx:else>
+    <scroll-view class="lrc">
+      <text bindtap="toggleLyrics" user-select="true">{{lrc}}</text>
+    </scroll-view>
+  </view>
+  <view class="playContral">
+    <text class="iconfont icon-random"></text>
+    <text class="iconfont icon-step-backward" id="pre" bindtap="toggleSong"></text>
+    <text class="iconfont {{flag?'icon-zanting1':'icon-play1'}}" bindtap="play"></text>
+    <text class="iconfont icon-step-forward" id="next"bindtap="toggleSong"></text>
+    <text class="iconfont  icon-zujian-icon-32"></text>
+  </view>
+</view>

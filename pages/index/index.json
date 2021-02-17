@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "itemNav":"/components/ItemNav/itemNav"
+  }
+}

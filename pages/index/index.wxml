@@ -1,0 +1,60 @@
+<view>
+  <swiper indicator-dots="{{true}}" circular="true"autoplay="{{true}}" interval="{{5000}}" duration="{{500}}" indicator-active-color="#c40c0c">
+    <block wx:for="{{banners}}" wx:key="index">
+      <swiper-item>
+        <image class="swiper-image" src="{{item.imageUrl}}" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="container">
+    <navigator url="/pages/recommendation/recommendation">
+      <view class="item">
+        <text class="iconfont icon-rementuijian"></text>
+        <text>热门推荐</text>
+      </view>
+    </navigator>
+   <navigator url="/pages/leaderboard/leaderboard">
+    <view class="item">
+      <text class="iconfont  icon-paihang"></text>
+      <text>排行榜</text>
+    </view>
+   </navigator>
+   <navigator url="/pages/album/album">
+    <view class="item">
+      <text class="iconfont icon-xiaoxi_xingexindie_ "></text>
+      <text>新碟上架</text>
+    </view>
+   </navigator>
+    <view class="item">
+      <text class="iconfont icon-mv"></text>
+      <text>MV</text>
+    </view>
+  </view>
+  <itemNav more="更多>"></itemNav>
+  <swiper duration="{{500}}" class="hotRec">
+    <block>
+      <swiper-item class="recItem" wx:for="{{recComList}}" wx:key="item"  class="RecommendedList">
+        <view wx:for="{{item}}" wx:key="id" class="recItem" data-id="{{item.id}}" bindtap="TOlist">
+          <image class="img-responsive" src="{{item.picUrl}}"></image>
+          <text>{{item.name}}</text>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <itemNav innerText="今日新歌" more="更多>"></itemNav>
+  <view class="listContainer">
+    <view class="listItem" wx:for="{{data}}"data-id="{{item.id}}" bindtap="play" data-pre="{{data}}"wx:key="index">
+      <image src="{{item.picUrl}}"></image>
+      <view class="itemMain">
+        <view>
+          <text class="itemName">{{item.name}}</text>
+          <text class="inf" space="ensp">{{item.song.alias}}</text>
+        </view>
+        <view>
+          <text class="itemArt" wx:for="{{item.song.artists}}" wx:for-item="name" wx:key="id">{{name.name}}</text>
+        </view>
+      </view>
+      <text class="itemTime"></text>
+    </view>
+  </view>
+</view>

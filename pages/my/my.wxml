@@ -1,0 +1,43 @@
+<view>
+  <View class="myContainer">
+    <!-- 用户头像 -->
+    <view class="UserBg">
+      <view class="user">
+        <view class="userImage" wx:if="{{pic}}" style="background:url({{pic}});background-size:100%"></view>
+        <view class="userImage" wx:else ></view>
+        <text class="toLogin" wx:if="{{name}}">{{name}}</text>
+        <text class="toLogin" wx:else bindtap="toLogin">立即登录>></text>
+      </view>
+    </view>
+    <!-- 喜欢的音乐 -->
+    <view class="Like">
+      <view class="Mylike">
+        <image class="userLike" wx:if="{{like}}"src="{{like.coverImgUrl}}"></image>
+        <image class="userLike" wx:else src="../../static/img/head.jpg"></image>
+      </view>
+      <view class="LikeInfo" >
+        <text>我喜欢的音乐</text>
+        <view class="info"  data-id="{{like.id}}"bindtap="toPlayList">
+          <text wx:if="{{like}}">{{like.trackCount}}首</text>
+          <text wx:else>未登录</text>
+        </view>
+      </view>
+    </view>
+    <!-- 创建的歌单 -->
+    <view class="myList">
+      <text>我的的歌单</text>
+     <view class="listMain">
+       <view class="playList" wx:if="{{list}}" >
+         <view class="listItem" wx:for="{{list}}"  wx:key="id" data-id="{{item.id}}"bindtap="toPlayList">
+           <image src="{{item.coverImgUrl}}"></image>
+           <view class="countN">
+            <text>{{item.name}}</text>
+            <text class="num">{{item.trackCount}}首</text>
+           </view>
+         </view>
+       </view>
+       <text wx:else>未登陆</text>
+     </view>
+    </view>
+  </View>
+</view>
